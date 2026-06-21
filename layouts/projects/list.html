@@ -1,0 +1,54 @@
+{{- define "main" }}
+
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">
+    {{ .Description | markdownify }}
+  </div>
+  {{- end }}
+</header>
+
+{{- if .Content }}
+<div class="post-content portfolio-intro">
+  {{- if not (.Param "disableAnchoredHeadings") }}
+  {{- partial "anchored_headings.html" .Content -}}
+  {{- else }}{{ .Content }}{{ end }}
+</div>
+{{- end }}
+
+<div class="portfolio-grid">
+  {{- range .RegularPages.ByWeight }}
+  {{- $project := . }}
+  <article class="portfolio-card">
+    <a class="portfolio-card-link" href="{{ .RelPermalink }}" aria-label="View project: {{ .Title | plainify }}">
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-meta">
+          {{- with .Params.status }}<span>{{ . }}</span>{{- end }}
+          {{- with .Params.role }}<span>{{ . }}</span>{{- end }}
+        </div>
+        <h2>{{ .Title }}</h2>
+        {{- with .Summary }}
+        <p>{{ . | plainify | htmlUnescape }}</p>
+        {{- end }}
+      </div>
+      {{- with .Params.tech }}
+      <ul class="portfolio-tech" aria-label="Technologies">
+        {{- range . }}
+        <li>{{ . }}</li>
+        {{- end }}
+      </ul>
+      {{- end }}
+    </a>
+    {{- with .Params.repoUrl }}
+    <a class="portfolio-repo-link" href="{{ . }}" target="_blank" rel="noopener">GitHub</a>
+    {{- end }}
+    {{- with .Params.siteUrl }}
+    <a class="portfolio-repo-link" href="{{ . }}" target="_blank" rel="noopener">{{ default "Project page" $project.Params.sitelabel }}</a>
+    {{- end }}
+  </article>
+  {{- end }}
+</div>
+
+{{- end }}

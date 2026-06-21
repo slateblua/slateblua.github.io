@@ -1,0 +1,61 @@
+baseURL: "https://slateblua.github.io/"
+title: "slateblua"
+theme: "PaperMod"
+languageCode: "en-us"
+enableRobotsTXT: true
+defaultContentLanguage: "en"
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+# General parameters for PaperMod
+params:
+  author: "Sergey"
+
+  homeInfoParams:
+    Title: "Hi, I'm Sergey"
+    Content: >
+      I'm a software engineer building apps, games, and backend systems.  
+      This is my personal site where I share projects, notes, and thoughts.  
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/slateblua"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/sergey-h/"
+    - name: email
+      url: "mailto:sergdevone@gmail.com"
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: false
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+
+  profileMode:
+    enabled: true
+    title: "slateblua"
+    subtitle: "Software Developer"
+    buttons:
+      - name: Portfolio
+        url: "/projects/"
+      - name: About
+        url: "/about/"
+
+caches:
+  images:
+    dir: :cacheDir/images
+
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 10
+
+    - identifier: projects
+      name: Portfolio
+      url: /projects/
+      weight: 10
