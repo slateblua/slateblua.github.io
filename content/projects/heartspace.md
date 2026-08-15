@@ -5,7 +5,7 @@ draft: false
 summary: "Mood tracker app made with Compose"
 description: "Mood tracker app made with Compose"
 tech: ["Kotlin", "Jetpack Compose", "Voyager", "Koin"]
-role: "Android app"
+role: "Mobile app"
 status: "Open source"
 repoUrl: "https://github.com/slateblua/heartspace"
 weight: 5

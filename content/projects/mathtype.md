@@ -4,8 +4,8 @@ date: 2025-03-20
 draft: false
 summary: "A TypeScript tool for typing math faster by turning natural-language prompts into MathJax autocomplete suggestions."
 description: "A TypeScript tool for faster mathematical notation input."
-tech: ["TypeScript", "MathJax"]
-role: "Obsidian Tool"
+tech: ["TypeScript"]
+role: "Obsidian Plugin"
 status: "Open source"
 repoUrl: "https://github.com/slateblua/mathtype"
 weight: 4
