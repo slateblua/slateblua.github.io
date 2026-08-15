@@ -18,4 +18,4 @@ You can read more about the project [here](https://rockbitegames.com/games/idleo
 
 ## Tech
 
-Built with LibGDX and [TalosVFX[(https://talosvfx.com/).
+Built with LibGDX and [TalosVFX](https://talosvfx.com/).
