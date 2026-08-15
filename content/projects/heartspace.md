@@ -11,17 +11,7 @@ repoUrl: "https://github.com/slateblua/heartspace"
 weight: 5
 ---
 
-Heartspace is an offline-first, minimal mood tracker application for Android made with Jetpack Compose and Kotlin. 
-
-## Links
-
-- [GitHub repository](https://github.com/slateblua/heartspace)
-
-## Highlights
-
-- Compose based reactive interface.
-- Dependency injection with Koin.
-- Room for local data storage.
+Heartspace is an offline-first, minimal mood tracker application for Android made with Jetpack Compose and Kotlin. You can check out the source code [here](https://github.com/slateblua/heartspace)
 
 ## Tech
 
