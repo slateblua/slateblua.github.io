@@ -41,11 +41,15 @@
       </ul>
       {{- end }}
     </a>
-    {{- with .Params.repoUrl }}
-    <a class="portfolio-repo-link" href="{{ . }}" target="_blank" rel="noopener">GitHub</a>
-    {{- end }}
-    {{- with .Params.siteUrl }}
-    <a class="portfolio-repo-link" href="{{ . }}" target="_blank" rel="noopener">{{ default "Project page" $project.Params.sitelabel }}</a>
+    {{- if or .Params.repoUrl .Params.siteUrl }}
+    <div class="portfolio-card-actions">
+      {{- with .Params.repoUrl }}
+      <a class="portfolio-repo-link" href="{{ . }}" target="_blank" rel="noopener">GitHub</a>
+      {{- end }}
+      {{- with .Params.siteUrl }}
+      <a class="portfolio-repo-link" href="{{ . }}" target="_blank" rel="noopener">{{ default "Project page" (or $project.Params.sitelabel $project.Params.siteLabel) }}</a>
+      {{- end }}
+    </div>
     {{- end }}
   </article>
   {{- end }}
