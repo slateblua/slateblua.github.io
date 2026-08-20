@@ -4,7 +4,7 @@ date: 2025-09-13
 draft: false
 summary: "Mood tracker app made with Compose"
 description: "Mood tracker app made with Compose"
-tech: ["Kotlin", "Jetpack Compose", "Voyager", "Koin"]
+tech: ["Kotlin", "Compose", "Koin", "Room"]
 role: "Mobile app"
 status: "Open source"
 bannerBg: "linear-gradient(135deg, #241a38 0%, #120e1d 100%)"
