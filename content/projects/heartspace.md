@@ -7,6 +7,11 @@ description: "Mood tracker app made with Compose"
 tech: ["Kotlin", "Jetpack Compose", "Voyager", "Koin"]
 role: "Mobile app"
 status: "Open source"
+bannerBg: "linear-gradient(135deg, #241a38 0%, #120e1d 100%)"
+logo: "/images/projects/heartspace_logo.png"
+cover:
+  image: "/images/projects/heartspace_logo.png"
+  alt: "HeartSpace logo"
 repoUrl: "https://github.com/slateblua/heartspace"
 weight: 5
 ---

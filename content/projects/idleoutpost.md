@@ -6,6 +6,11 @@ description: "An Idle RPG mobile game by Rockbite Games."
 tech: ["Game Development", "Mobile Game", "Live Game"]
 role: "Game"
 status: "Commercial"
+bannerBg: "linear-gradient(135deg, #2b1f18 0%, #15110f 100%)"
+logo: "/images/projects/idle_outpost_logo.png"
+cover:
+  image: "/images/projects/idle_outpost_logo.png"
+  alt: "Idle Outpost logo"
 siteUrl: "https://rockbitegames.com/games/idleoutpost"
 siteLabel: "Webpage"
 weight: 1

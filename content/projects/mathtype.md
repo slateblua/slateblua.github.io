@@ -6,6 +6,11 @@ description: "A TypeScript tool for faster mathematical notation input."
 tech: ["TypeScript"]
 role: "Obsidian Plugin"
 status: "Open source"
+bannerBg: "linear-gradient(135deg, #142236 0%, #0a111c 100%)"
+logo: "/images/projects/mathtype_logo.png"
+cover:
+  image: "/images/projects/mathtype_logo.png"
+  alt: "MathType logo"
 repoUrl: "https://github.com/slateblua/mathtype"
 weight: 4
 ---
