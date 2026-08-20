@@ -3,7 +3,7 @@ title: "Heartspace"
 date: 2025-09-13
 draft: false
 summary: "Mood tracker app made with Compose"
-description: "Mood tracker app made with Compose"
+description: "Mood tracker app made with Compose."
 tech: ["Kotlin", "Compose", "Koin", "Room"]
 role: "Mobile app"
 status: "Open source"
