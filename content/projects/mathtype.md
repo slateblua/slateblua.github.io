@@ -1,7 +1,7 @@
 ---
 title: "MathType"
 draft: false
-summary: "A TypeScript tool for typing math faster by turning natural-language prompts into MathJax autocomplete suggestions."
+summary: "A TypeScript tool for faster mathematical notation input."
 description: "A TypeScript tool for faster mathematical notation input."
 tech: ["TypeScript"]
 role: "Obsidian Plugin"

@@ -1,7 +1,7 @@
 ---
 title: "Idle Outpost"
 draft: false
-summary: "An Idle RPG game by Rockbite Games where players grow a post-apocalyptic trading outpost, unlock locations, upgrade resources, and survive zombie threats."
+summary: "An Idle RPG mobile game by Rockbite Games."
 description: "An Idle RPG mobile game by Rockbite Games."
 tech: ["Game Development", "Mobile Game", "Live Game"]
 role: "Game"
