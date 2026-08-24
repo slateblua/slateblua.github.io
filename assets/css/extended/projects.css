@@ -16,7 +16,6 @@
     border: 1px solid var(--border);
     border-radius: var(--radius);
     background: var(--entry);
-    overflow: hidden;
     transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
@@ -29,56 +28,10 @@
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
+    padding: var(--gap);
     color: inherit;
     box-shadow: none;
     text-decoration: none;
-}
-
-.portfolio-card-banner {
-    position: relative;
-    width: 100%;
-    height: 150px;
-    overflow: hidden;
-    background: var(--tertiary, rgba(128, 128, 128, 0.08));
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.portfolio-card-banner > img:not(.portfolio-card-logo) {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.portfolio-card:hover .portfolio-card-banner > img:not(.portfolio-card-logo) {
-    transform: scale(1.04);
-}
-
-.portfolio-card-logo {
-    max-width: 68%;
-    max-height: 80px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-    filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.45));
-}
-
-.portfolio-card:hover .portfolio-card-logo {
-    transform: scale(1.08);
-}
-
-.portfolio-card-content {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
-    padding: var(--gap);
 }
 
 .portfolio-card-body {
@@ -150,51 +103,4 @@
 
 .portfolio-repo-link:hover {
     text-decoration: underline;
-}
-
-/* Single Project Page Banner */
-.project-single-banner {
-    position: relative;
-    width: 100%;
-    height: 180px;
-    margin: var(--gap) 0;
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--entry);
-}
-
-.project-single-banner > img:not(.project-single-logo) {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-
-.project-single-logo {
-    max-width: 65%;
-    max-height: 100px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.45));
-}
-
-.project-single-meta {
-    margin-top: 10px;
-}
-
-.project-single-actions {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 16px;
-    margin-top: var(--gap);
-    padding-top: var(--gap);
-    border-top: 1px solid var(--border);
 }

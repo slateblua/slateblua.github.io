@@ -21,56 +21,25 @@
 <div class="portfolio-grid">
   {{- range .RegularPages.ByWeight }}
   {{- $project := . }}
-  {{- $logo := .Params.logo }}
-  {{- $bannerBg := .Params.bannerBg }}
-  {{- $bannerImg := or .Params.banner (.Params.cover.image | default .Params.image) }}
-  {{- $bannerAlt := or .Params.bannerAlt (.Params.cover.alt | default .Title) }}
   <article class="portfolio-card">
     <a class="portfolio-card-link" href="{{ .RelPermalink }}" aria-label="View project: {{ .Title | plainify }}">
-      {{- if or $logo $bannerBg $bannerImg }}
-      <div class="portfolio-card-banner{{ if or $logo $bannerBg }} portfolio-card-banner--logo{{ end }}"{{ with $bannerBg }} style="background: {{ . | safeCSS }};"{{ end }}>
-        {{- if $logo }}
-          {{- $logoResource := or (.Resources.GetMatch (printf "*%s*" $logo)) (resources.GetMatch (printf "*%s*" $logo)) }}
-          {{- $logoSrc := $logo }}
-          {{- if $logoResource }}
-            {{- $logoSrc = $logoResource.RelPermalink }}
-          {{- else if not (hasPrefix $logo "http") }}
-            {{- $logoSrc = $logo | relURL }}
-          {{- end }}
-          <img class="portfolio-card-logo" src="{{ $logoSrc }}" alt="{{ $bannerAlt | plainify }}" loading="lazy">
-        {{- else if and $bannerImg (not $bannerBg) }}
-          {{- $pageBundleCover := (.Resources.GetMatch (printf "*%s*" $bannerImg)) }}
-          {{- $globalResourcesCover := (resources.GetMatch (printf "*%s*" $bannerImg)) }}
-          {{- $cover := or $pageBundleCover $globalResourcesCover }}
-          {{- $bannerSrc := $bannerImg }}
-          {{- if $cover }}
-            {{- $bannerSrc = $cover.RelPermalink }}
-          {{- else if not (hasPrefix $bannerImg "http") }}
-            {{- $bannerSrc = $bannerImg | relURL }}
-          {{- end }}
-          <img src="{{ $bannerSrc }}" alt="{{ $bannerAlt | plainify }}" loading="lazy">
-        {{- end }}
-      </div>
-      {{- end }}
-      <div class="portfolio-card-content">
-        <div class="portfolio-card-body">
-          <div class="portfolio-card-meta">
-            {{- with .Params.status }}<span>{{ . }}</span>{{- end }}
-            {{- with .Params.role }}<span>{{ . }}</span>{{- end }}
-          </div>
-          <h2>{{ .Title }}</h2>
-          {{- with .Summary }}
-          <p>{{ . | plainify | htmlUnescape }}</p>
-          {{- end }}
+      <div class="portfolio-card-body">
+        <div class="portfolio-card-meta">
+          {{- with .Params.status }}<span>{{ . }}</span>{{- end }}
+          {{- with .Params.role }}<span>{{ . }}</span>{{- end }}
         </div>
-        {{- with .Params.tech }}
-        <ul class="portfolio-tech" aria-label="Technologies">
-          {{- range . }}
-          <li>{{ . }}</li>
-          {{- end }}
-        </ul>
+        <h2>{{ .Title }}</h2>
+        {{- with .Summary }}
+        <p>{{ . | plainify | htmlUnescape }}</p>
         {{- end }}
       </div>
+      {{- with .Params.tech }}
+      <ul class="portfolio-tech" aria-label="Technologies">
+        {{- range . }}
+        <li>{{ . }}</li>
+        {{- end }}
+      </ul>
+      {{- end }}
     </a>
     {{- if or .Params.repoUrl .Params.siteUrl }}
     <div class="portfolio-card-actions">
